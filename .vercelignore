@@ -1,0 +1,5 @@
+# not part of the site
+*.heic
+*.HEIC
+dev-server.mjs
+README.md

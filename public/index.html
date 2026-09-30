@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>happy birthday ♡</title>
+  <meta name="description" content="a little scrapbook, made for you">
+  <meta name="theme-color" content="#EFE7DC">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8E%80%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Nunito:wght@600;700;800&family=Special+Elite&display=swap">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- shared patterns for bows and ribbons -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <defs>
+      <pattern id="bw" width="7" height="7" patternUnits="userSpaceOnUse">
+        <rect width="7" height="7" fill="#F6F0E7"/>
+        <rect width="3.5" height="7" fill="#2B2522" opacity=".5"/>
+        <rect width="7" height="3.5" fill="#2B2522" opacity=".5"/>
+      </pattern>
+      <pattern id="rw" width="7" height="7" patternUnits="userSpaceOnUse">
+        <rect width="7" height="7" fill="#FAF3EE"/>
+        <rect width="3.5" height="7" fill="#C98E87" opacity=".55"/>
+        <rect width="7" height="3.5" fill="#C98E87" opacity=".55"/>
+      </pattern>
+    </defs>
+  </svg>
+
+  <main class="stage">
+    <p class="whisper" id="whisper">drag the corner to turn the page ♡</p>
+    <div class="book-wrap loading" id="book-wrap">
+      <div id="book"></div>
+      <div class="spiral" id="spiral" hidden></div>
+    </div>
+    <nav class="nav" aria-label="Pages">
+      <button id="prev" aria-label="Previous page">&#8592;</button>
+      <span class="count" id="count" aria-live="polite"></span>
+      <button id="next" aria-label="Next page">&#8594;</button>
+    </nav>
+  </main>
+
+  <div class="dock" id="dock">
+    <div class="selbar" id="selbar" hidden></div>
+    <button class="pill save-pill" id="save-all" hidden>save changes</button>
+    <button class="pill primary" id="pouch" aria-expanded="false" aria-controls="sheet">
+      <svg width="16" height="16" viewBox="0 0 100 100" aria-hidden="true"><path d="M50 88 C22 68 8 52 9 33 C10 18 22 9 35 10 C43 11 48 16 50 22 C52 16 57 11 65 10 C78 9 90 18 91 33 C92 52 78 68 50 88Z" fill="currentColor"/></svg>
+      stickers
+    </button>
+  </div>
+
+  <section class="sheet" id="sheet" hidden aria-label="Sticker pouch">
+    <div class="sheet-head">
+      <div class="tabs" role="tablist">
+        <button role="tab" data-tab="faces" aria-selected="true">our faces</button>
+        <button role="tab" data-tab="doodles" aria-selected="false">doodles</button>
+        <button role="tab" data-tab="words" aria-selected="false">words</button>
+      </div>
+      <button class="x" id="close-sheet" aria-label="Close stickers">&times;</button>
+    </div>
+    <div id="sheet-body"></div>
+    <div class="sheet-foot" id="sheet-foot"></div>
+  </section>
+
+  <div class="toast" id="toast" hidden></div>
+
+  <script src="vendor/page-flip.browser.js"></script>
+  <script src="content.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
