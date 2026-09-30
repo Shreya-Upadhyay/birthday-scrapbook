@@ -4,6 +4,21 @@ A flippable, kraft-paper scrapbook website to make for someone's birthday. Fill 
 photos and messages, decorate it with stickers, put it online for free, and send them the link.
 They can flip through it and add their own stickers, including stickers cut out of your photos.
 
+![A two-page spread with a letter, a framed photo and stickers](docs/spread.jpg)
+
+<table>
+  <tr>
+    <td width="50%"><img src="docs/cover.jpg" alt="The cover with cut-out letters spelling happy birthday"></td>
+    <td width="50%"><img src="docs/phone.jpg" alt="The book on a phone, one page at a time"></td>
+  </tr>
+  <tr>
+    <td align="center">the cover</td>
+    <td align="center">on a phone, one page at a time</td>
+  </tr>
+</table>
+
+*The screenshots use generated sample images. Your photos go where they say "your photo".*
+
 - Real page-turning book (spiral binding on desktop, one page at a time on phones)
 - Polaroids, gingham, newspaper clippings, washi tape, typewriter labels, bows
 - Sticker pouch: your photos cut into hearts, circles, stars and more, plus doodles and word stickers
@@ -37,6 +52,12 @@ Open http://localhost:5173. While it runs on your computer, the book is in edit 
   resize or peel them off with the buttons that appear.
 - Press **save changes** when you're done. Your edits are written into `public/content.js`,
   your photos into `public/photos/`, and your stickers into `public/layout.json`.
+
+![Editing a headline while a photo frame shows its change photo button](docs/editing.jpg)
+*Click any words to type. Hover a photo to swap it.*
+
+![The sticker pouch with photos cut into scalloped stickers](docs/stickers.jpg)
+*Every photo in the book becomes a sticker. Pick a shape, then tap to stick it.*
 
 Unsaved edits are kept in your browser, so a closed tab doesn't lose them.
 
